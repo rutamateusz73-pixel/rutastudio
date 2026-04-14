@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>RUTA STUDIO — Projektowanie i programowanie stron internetowych</title>
+<meta name="description" content="RUTA STUDIO — niezależne studio projektowania i programowania stron internetowych. Szybkie, dopracowane i konwertujące witryny." />
+
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' fill='%230b1426'/><g transform='translate(32 32) rotate(45)'><rect x='-18' y='-18' width='36' height='36' fill='%234d9bff'/><rect x='-12' y='-12' width='24' height='24' fill='%230b1426'/></g></svg>" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Fraunces:ital,opsz,wght@0,9..144,300;0,9..144,400;0,9..144,600;0,9..144,800;1,9..144,400&display=swap" rel="stylesheet">
+
+<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<!-- NAV -->
+<nav class="nav">
+  <a href="#top" class="logo">
+    <span class="logo-mark"></span>
+    <span class="logo-text">
+      <span class="name">RUTA&nbsp;STUDIO</span>
+      <span class="sub">Web · Design · Code</span>
+    </span>
+  </a>
+  <div class="nav-links">
+    <a href="#services"><span class="num">01</span> Usługi</a>
+    <a href="#about"><span class="num">02</span> O mnie</a>
+    <a href="#portfolio"><span class="num">03</span> Portfolio</a>
+    <a href="#process"><span class="num">04</span> Proces</a>
+    <a href="faq.html"><span class="num">05</span> FAQ</a>
+  </div>
+  <a href="#booking" class="nav-cta">
+    <span class="dot"></span>
+    Umów spotkanie
+  </a>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-grid"></div>
+  <div class="hero-meta">
+    <span>[ EST. 2026 ] — WARSZAWA · PL</span>
+    <span>v.2026 / N° 001</span>
+  </div>
+
+  <div class="hero-main">
+    <div class="hero-left">
+      <h1 class="hero-title">
+        Strony,<br>
+        które <em>działają</em><br>
+        <span class="strike">szablony</span> — kod.
+      </h1>
+
+      <div class="hero-bottom">
+        <p class="hero-desc">
+          <strong>RUTA STUDIO</strong> to niezależna pracownia projektowania i programowania
+          stron internetowych. Buduję szybkie, dopracowane i konwertujące witryny
+          dla firm, które nie chcą wyglądać jak wszyscy inni. Bez śmieciowego kodu,
+          bez pustych obietnic — tylko rzemiosło.
+        </p>
+        <div class="hero-cta-row">
+          <a href="#booking" class="btn btn-primary">
+            Umów rozmowę <span class="arrow">→</span>
+          </a>
+          <a href="#portfolio" class="btn btn-ghost">
+            Zobacz realizacje
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <aside class="hero-card">
+      <div class="hero-card-top">
+        <div class="hero-card-dots">
+          <span></span><span></span><span></span>
+        </div>
+        <span class="hero-card-name">~/ruta-studio/status.log</span>
+      </div>
+
+      <div class="hero-card-body">
+        <div class="hero-card-row">
+          <span class="hero-card-key">status</span>
+          <span class="hero-card-val"><span class="dot-live"></span> gotów do nowych projektów</span>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-key">lokalizacja</span>
+          <span class="hero-card-val">Poznań → cała Polska (zdalnie)</span>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-key">specjalizacja</span>
+          <span class="hero-card-val">strony firmowe · landingi · opieka</span>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-key">najwcześniejszy start</span>
+          <span class="hero-card-val">~tydzień od rozmowy</span>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-key">czas odpowiedzi</span>
+          <span class="hero-card-val">do 48h</span>
+        </div>
+        <div class="hero-card-row">
+          <span class="hero-card-key">preferowany kontakt</span>
+          <span class="hero-card-val">Google Meet / e-mail lub telefon</span>
+        </div>
+
+        <div class="hero-card-sep"></div>
+
+        <div class="hero-card-quote">
+          <span class="quote-mark">&ldquo;</span>
+          Jedna osoba od pierwszej linii kodu do launchu. Bez pośredników, bez juniorów, bez obietnic bez pokrycia.
+        </div>
+
+        <div class="hero-card-cli">
+          <span class="prompt">&gt;</span>
+          <span class="cmd">ruta -- book-meeting</span>
+          <span class="caret"></span>
+        </div>
+      </div>
+    </aside>
+  </div>
+</section>
+
+
+
+<!-- SERVICES -->
+<section class="section" id="services">
+  <header class="section-header">
+    <span class="section-num">[ 01 / USŁUGI ]</span>
+    <h2 class="section-title">Co <em>robię</em></h2>
+  </header>
+
+  <div class="services">
+    <div class="service">
+      <span class="service-idx">— 001</span>
+      <h3 class="service-name">Pisanie stron internetowych</h3>
+      <p class="service-desc">Projektuję i koduję strony firmowe od zera — ręcznie, bez szablonów. Dopracowane wizualnie, szybkie, zoptymalizowane pod SEO i konwersję. Strony wizerunkowe, landingi, portfolia, witryny dla firm usługowych.</p>
+      <span class="service-price">wycena <b>indywidualna</b></span>
+    </div>
+    <div class="service">
+      <span class="service-idx">— 002</span>
+      <h3 class="service-name">Poprawki i aktualizacje istniejących stron</h3>
+      <p class="service-desc">Masz już stronę, ale coś nie gra? Redesign sekcji, przyspieszenie ładowania, poprawa wyglądu na mobile, aktualizacja treści, naprawa błędów, odświeżenie całej witryny. Pracuję na tym, co już masz.</p>
+      <span class="service-price">wycena <b>indywidualna</b></span>
+    </div>
+    <div class="service">
+      <span class="service-idx">— 003</span>
+      <h3 class="service-name">Opieka i wsparcie</h3>
+      <p class="service-desc">Hosting, backupy, aktualizacje, monitoring, drobne zmiany na bieżąco. Spokojna głowa i telefon, który odbiera człowiek — nie support. Pakiety miesięczne lub rozliczenie za zrealizowane zadania.</p>
+      <span class="service-price">wycena <b>indywidualna</b></span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section class="section" id="about">
+  <header class="section-header">
+    <span class="section-num">[ 02 / O MNIE ]</span>
+    <h2 class="section-title">Kto za tym <em>stoi</em></h2>
+  </header>
+
+  <div class="about">
+    <div class="about-text">
+      <p class="about-hello">Cześć 👋</p>
+      <p>Nazywam się <em>Mateusz Ruta</em> i jestem założycielem <em style="letter-spacing: 0.05em;">RUTA STUDIO</em> — jednoosobowej pracowni, w której projektuję i koduję strony internetowe dla firm w Polsce.</p>
+      <p>Zaczynam i jestem z tym szczery — dopiero buduję portfolio. Ale właśnie dlatego na tym etapie dostajesz ode mnie coś, czego nie dostaniesz od dużej agencji: <em>pełne zaangażowanie, uczciwą cenę i bezpośredni kontakt</em> z osobą, która od pierwszej linii kodu do launchu trzyma projekt w rękach.</p>
+      <p>Nie umawiam Cię na handlowca, nie przerzucam projektu juniorowi, nie znikam po wdrożeniu. Robię stronę tak, jakbym robił ją sobie — i dokładnie tak traktuję każdy projekt, który biorę.</p>
+    </div>
+
+    <div>
+      <div class="about-stats">
+        <div class="stat">
+          <div class="stat-value">1:1</div>
+          <div class="stat-label">Bezpośrednia<br>współpraca</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">100%</div>
+          <div class="stat-label">Ręcznie pisany<br>kod</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">48h</div>
+          <div class="stat-label">Czas odpowiedzi<br>na wiadomość</div>
+        </div>
+        <div class="stat">
+          <div class="stat-value">∞</div>
+          <div class="stat-label">Energia<br>i zaangażowanie</div>
+        </div>
+      </div>
+
+      <div class="tech-stack">
+        <div class="tech-stack-label">// Stack techniczny</div>
+        <div class="tech-list">
+          <span class="tech">HTML</span>
+          <span class="tech">CSS</span>
+          <span class="tech">Figma</span>
+          <span class="tech">JavaScript</span>
+          <span class="tech">TypeScript</span>
+          <span class="tech">WordPress</span>
+          <span class="tech">Git</span>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ZASADY -->
+  <div class="principles">
+    <div class="principles-header">
+      <span class="principles-label">// Moje zasady</span>
+      <h3 class="principles-title">Trzy rzeczy, na których <em>nie idę na kompromis</em></h3>
+    </div>
+    <div class="principles-grid">
+      <div class="principle">
+        <div class="principle-num">I.</div>
+        <h4 class="principle-name">Uczciwość ponad wszystko</h4>
+        <p class="principle-desc">Jeśli projekt przekracza moje możliwości albo budżet się nie spina — powiem Ci wprost. Jeśli coś pójdzie nie tak, dowiesz się pierwszy. Żadnej zasłony dymnej.</p>
+      </div>
+      <div class="principle">
+        <div class="principle-num">II.</div>
+        <h4 class="principle-name">Rzemiosło, nie szablony</h4>
+        <p class="principle-desc">Każda strona pisana jest ręcznie, z myślą o Twojej firmie. Nie kupuję motywu z Themeforest, nie klikam w Elementorze do białego rana. Kod jest czysty, szybki i Twój — dostajesz go w pełni, bez licencji i abonamentów na zawsze.</p>
+      </div>
+      <div class="principle">
+        <div class="principle-num">III.</div>
+        <h4 class="principle-name">Długoterminowa relacja</h4>
+        <p class="principle-desc">Zależy mi na tym, żebyś wrócił za rok z kolejnym projektem albo polecił mnie znajomemu. Dlatego nie znikam po uruchomieniu strony — zostaję w kontakcie, odpowiadam na pytania i pomagam, gdy coś trzeba zmienić.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- PORTFOLIO -->
+<section class="section" id="portfolio">
+  <header class="section-header">
+    <span class="section-num">[ 03 / PORTFOLIO ]</span>
+    <h2 class="section-title">Wybrane <em>realizacje</em></h2>
+  </header>
+
+  <div class="portfolio-grid">
+    <a href="#" class="project half">
+      <div class="project-visual viz-1"></div>
+      <div class="project-content">
+        <span class="project-tag">— Realizacja 01</span>
+        <h3 class="project-title">Wkrótce — pierwszy projekt</h3>
+      </div>
+      <div class="project-meta">
+        <span>2026</span>
+        <span>Do podmiany</span>
+      </div>
+    </a>
+
+    <a href="#" class="project half">
+      <div class="project-visual viz-3"></div>
+      <div class="project-content">
+        <span class="project-tag">— Realizacja 02</span>
+        <h3 class="project-title">Wkrótce — drugi projekt</h3>
+      </div>
+      <div class="project-meta">
+        <span>2026</span>
+        <span>Do podmiany</span>
+      </div>
+    </a>
+  </div>
+</section>
+
+<!-- PROCESS -->
+<section class="section" id="process">
+  <header class="section-header">
+    <span class="section-num">[ 04 / PROCES ]</span>
+    <h2 class="section-title">Jak <em>pracuję</em></h2>
+  </header>
+
+  <div class="process-grid">
+    <div class="process-step">
+      <div class="step-num">01</div>
+      <div class="step-label">[ TYDZIEŃ 1 ]</div>
+      <h4 class="step-title">Rozmowa</h4>
+      <p class="step-desc">Bezpłatne spotkanie online. Poznajemy się, ustalamy cele, budżet i ramy czasowe. Dostajesz wycenę i plan działania.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">02</div>
+      <div class="step-label">[ TYDZIEŃ 2 ]</div>
+      <h4 class="step-title">Strategia i UX</h4>
+      <p class="step-desc">Architektura informacji, wireframes, ścieżki użytkownika. Decydujemy, co ma działać — zanim padnie choć jeden piksel.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">03</div>
+      <div class="step-label">[ TYDZIEŃ 3-4 ]</div>
+      <h4 class="step-title">Design i kod</h4>
+      <p class="step-desc">Projekt graficzny w formie makiet, akceptacja, implementacja. Widzisz postępy na żywo w środowisku staging.</p>
+    </div>
+    <div class="process-step">
+      <div class="step-num">04</div>
+      <div class="step-label">[ TYDZIEŃ 5 ]</div>
+      <h4 class="step-title">Launch + opieka</h4>
+      <p class="step-desc">Testy, optymalizacja, SEO on-page, wdrożenie. Po starcie zostaję w kontakcie — strona ma rosnąć razem z Tobą.</p>
+    </div>
+  </div>
+</section>
+
+<!-- BOOKING -->
+<section class="section booking" id="booking">
+  <header class="section-header">
+    <span class="section-num">[ 05 / SPOTKANIE ]</span>
+    <h2 class="section-title">Umów <em>rozmowę</em></h2>
+  </header>
+
+  <div class="booking-wrap">
+    <div class="booking-info">
+      <h3>30 minut. Google Meet. Zero zobowiązań.</h3>
+      <p>Porozmawiajmy o Twoim projekcie. Po rozmowie będziesz wiedzieć dokładnie, ile, kiedy i jak — a jeśli nie jestem osobą, której szukasz, powiem Ci to wprost.</p>
+
+      <div class="booking-features">
+        <div class="booking-feature">Darmowa konsultacja, bez haczyków</div>
+        <div class="booking-feature">Link do Meet trafia automatycznie na Twój kalendarz</div>
+        <div class="booking-feature">Przed spotkaniem dostajesz krótką listę pytań, żebyśmy nie tracili czasu</div>
+        <div class="booking-feature">Po rozmowie — wstępna wycena w 48h</div>
+      </div>
+
+      <a href="mailto:kontakt@rutastudio.pl" class="btn btn-ghost">
+        Wolisz e-mail? <span class="arrow">→</span>
+      </a>
+    </div>
+
+    <div class="booking-widget">
+      <div class="booking-widget-header">
+        <span class="live blink">LIVE · GOOGLE CALENDAR</span>
+        <span>SESJA / 30 MIN</span>
+      </div>
+
+      <!--
+        ============================================================
+        INSTRUKCJA: Jak podłączyć prawdziwy widget Google Meet
+        ============================================================
+        1. Wejdź na calendar.google.com (zalogowany na konto, na
+           którym chcesz przyjmować spotkania).
+        2. Po lewej stronie kliknij "Utwórz" → "Termin spotkania"
+           (Appointment schedule).
+        3. Ustaw: długość spotkania 30 min, dostępność, bufor czasu.
+        4. W sekcji "Miejsce i konferencja" wybierz Google Meet —
+           link do Meet będzie generowany automatycznie.
+        5. Zapisz. Kliknij "Udostępnij" → "Skopiuj kod do
+           osadzenia" (embed code) i wklej go zamiast bloku .booking-placeholder
+           poniżej. Będzie wyglądał mniej więcej tak:
+           <iframe src="https://calendar.google.com/calendar/appointments/schedules/XXXX?gv=true" width="100%" height="600" frameborder="0"></iframe>
+        ============================================================
+      -->
+
+      <div class="booking-placeholder">
+        <h4>Podłącz Google Calendar</h4>
+        <p>Tu wklej <b>embed code</b> ze swojego<br>harmonogramu spotkań Google Calendar.</p>
+        <code>&lt;iframe src="https://calendar.google.com/calendar/appointments/schedules/..." &gt;</code>
+        <p style="margin-top:18px;font-size:11px">
+          Instrukcja krok po kroku →
+          <a href="https://support.google.com/calendar/answer/10729749" target="_blank" rel="noopener">support.google.com</a>
+        </p>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+
+<!-- FAQ SECTION -->
+<section class="section" id="faq">
+  <header class="section-header">
+    <span class="section-num">[ 06 / FAQ ]</span>
+    <h2 class="section-title">Najczęstsze <em>pytania</em></h2>
+  </header>
+  <div class="faq-container">
+    <!-- Lewa kolumna: Pytania -->
+    <div class="faq-list">
+      <div class="faq-item">
+        <button class="faq-q">
+          Ile kosztuje strona internetowa?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Każdy projekt wyceniam indywidualnie, bo wszystko zależy od zakresu, ilości podstron, stopnia złożoności designu i Twoich wymagań. Po krótkiej rozmowie (bezpłatnej) dostajesz pełną, stałą wycenę — bez niespodzianek i bez ukrytych kosztów. Nie działam na "od-do", wolę powiedzieć konkretną kwotę, gdy wiem, o czym rozmawiamy.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Ile trwa realizacja projektu?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Nowa strona firmowa to zwykle 3-5 tygodni. Drobne poprawki i aktualizacje istniejących stron — od kilku dni do 2 tygodni. Tempo zależy głównie od tego, jak szybko spływają treści i akceptacje z Twojej strony.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Jesteś początkujący — dlaczego miałbym Ci zaufać?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Uczciwe pytanie, więc uczciwa odpowiedź: bo dostajesz pełne zaangażowanie, uczciwą cenę i bezpośredni kontakt z osobą, której zależy. Duże agencje mają doświadczenie, ale często Twój projekt trafia do juniora, którego nigdy nie zobaczysz. Ja pracuję sam, więc każda linia kodu i każdy piksel przechodzi przeze mnie. Jeśli coś przekracza moje możliwości — powiem Ci to wprost, zanim weźmiemy projekt.</div>
+      </div>
+      <div class="faq-item">
+        <button class="faq-q">
+          Co jest zawarte w cenie?
+          <span class="icon">+</span>
+        </button>
+        <div class="faq-a">Projekt graficzny, kodowanie, wdrożenie na serwer, konfiguracja domeny, podstawowa optymalizacja SEO, podpięcie analityki, 30 dni wsparcia po uruchomieniu i pełne prawa do kodu. Bez licencji, dożywotnio.</div>
+      </div>
+    </div>
+
+    <!-- Prawa kolumna: Sidebar z CTA -->
+    <aside class="faq-sidebar">
+      <div class="faq-card">
+        <h4>Nie znalazłeś odpowiedzi?</h4>
+        <p>Każdy biznes jest inny, a niektóre pytania wymagają bardziej szczegółowej analizy Twojej sytuacji.</p>
+        <div class="faq-more">
+          <a href="faq.html" class="btn btn-ghost">
+            Pełna wersja FAQ <span class="arrow">→</span>
+          </a>
+          <a href="#booking" class="btn btn-primary faq-btn-full">
+            Umów konsultację <span class="arrow">→</span>
+          </a>
+        </div>
+        <span class="faq-more-hint">// 14 pytań w pełnej wersji FAQ</span>
+      </div>
+    </aside>
+  </div>
+</section>
+
+<!-- CONTACT -->
+<section class="contact-section" id="contact">
+  <h2 class="contact-huge">
+    Zróbmy <em>coś</em><br>
+    dobrego razem.
+  </h2>
+  <div class="contact-grid">
+    <div class="contact-item">
+      <div class="label">// E-mail</div>
+      <a href="mailto:kontakt@rutastudio.pl">kontakt@rutastudio.pl</a>
+    </div>
+    <div class="contact-item">
+      <div class="label">// Telefon</div>
+      <a href="tel:+48600000000">+48 600 000 000</a>
+    </div>
+    <div class="contact-item">
+      <div class="label">// Lokalizacja</div>
+      <span>Warszawa, PL<br>zdalnie / cały świat</span>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <span>© 2026 RUTA STUDIO · wszystkie prawa zastrzeżone</span>
+  <span>Zaprojektowane i zakodowane ręcznie ✦</span>
+</footer>
+
+<!-- STATUS BAR -->
+<div class="status-bar">
+  <span class="blink">DOSTĘPNY W NOWYCH PROJEKTACH</span>
+  <span class="hide-sm">RUTA_STUDIO / v2026.1</span>
+  <span>WAW · <span id="clock">--:--</span></span>
+</div>
+
+
+<script src="script.js"></script>
+</body>
+</html>

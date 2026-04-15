@@ -9,7 +9,7 @@
     --warn:#ffb800;
     --mono:'JetBrains Mono', ui-monospace, monospace;
     --serif:'Fraunces', Georgia, serif;
-    --site-gutter:clamp(18px,3vw,32px);
+    --site-gutter:clamp(24px,3.2vw,56px);
     --content-max:1560px;
   }
 
@@ -20,7 +20,7 @@
     color:var(--ink);
     font-family:var(--mono);
     font-size:15px;
-    line-height:1.6;
+    line-height:1.65;
     overflow-x:hidden;
     -webkit-font-smoothing:antialiased;
   }
@@ -28,18 +28,10 @@
   .hero,
   .section,
   .contact-section,
-  footer,
-  .status-bar{
-    width:100%;
-    padding-inline:var(--site-gutter);
-  }
-  .hero,
-  .section,
-  .contact-section,
-  .page-header,
-  .faq-section{
-    width:min(100%,var(--content-max));
+  footer{
+    width:min(100%, var(--content-max));
     margin-inline:auto;
+    padding-inline:var(--site-gutter);
   }
   .hero-main > *,
   .service > *,
@@ -72,7 +64,7 @@
   .nav{
     position:sticky;top:0;left:0;right:0;
     z-index:50;
-    padding:18px var(--site-gutter);
+    padding:18px 32px;
     display:flex;align-items:center;justify-content:space-between;
     backdrop-filter:blur(14px);
     background:rgba(11,20,38,.85);
@@ -169,7 +161,7 @@
     .nav-links{display:none}
   }
   @media(max-width:700px){
-    .nav{padding:14px var(--site-gutter)}
+    .nav{padding:14px 18px}
     .logo-text .sub{display:none}
   }
 
@@ -178,7 +170,7 @@
     position:fixed;bottom:0;left:0;right:0;
     z-index:40;
     display:flex;justify-content:space-between;
-    padding:10px var(--site-gutter);
+    padding:10px 32px;
     font-size:10px;text-transform:uppercase;letter-spacing:.15em;
     background:var(--bg);
     border-top:1px solid var(--line);
@@ -195,7 +187,7 @@
   /* ============ HERO ============ */
   .hero{
     min-height:clamp(680px, calc(100vh - 100px), 920px);
-    padding:60px var(--site-gutter) 80px;
+    padding:60px 32px 80px;
     position:relative;
     display:flex;flex-direction:column;
     gap:60px;
@@ -381,7 +373,7 @@
     .hero-card{max-width:520px}
   }
   @media(max-width:700px){
-    .hero{padding:50px var(--site-gutter)}
+    .hero{padding:50px 20px}
     .hero-main{gap:32px}
     .hero-left{gap:36px}
   }
@@ -413,7 +405,7 @@
   .btn:hover .arrow{transform:translateX(4px)}
 
   @media(max-width:800px){
-    .hero{padding:60px var(--site-gutter)}
+    .hero{padding:60px 20px}
   }
 
   /* ============ MARQUEE ============ */
@@ -445,7 +437,7 @@
 
   /* ============ SECTIONS ============ */
   .section{
-    padding:120px var(--site-gutter);
+    padding:124px var(--site-gutter);
     border-bottom:1px solid var(--line);
     position:relative;
   }
@@ -453,7 +445,7 @@
     display:grid;
     grid-template-columns:auto 1fr;
     gap:40px;align-items:baseline;
-    margin-bottom:80px;
+    margin-bottom:68px;
     padding-bottom:24px;
     border-bottom:1px solid var(--line);
   }
@@ -491,15 +483,18 @@
   }
 
   @media(max-width:700px){
-    .section{padding:80px var(--site-gutter)}
+    .section{padding:80px 20px}
     .section-header{grid-template-columns:1fr;gap:16px;margin-bottom:50px}
   }
 
   /* ============ SERVICES ============ */
+  #services.section{
+    max-width:var(--content-max);
+  }
   .services{display:grid;gap:0}
   .service{
     display:grid;
-    grid-template-columns:80px 1fr 2fr auto;
+    grid-template-columns:90px minmax(320px,1.05fr) minmax(560px,1.65fr) 170px;
     gap:40px;
     padding:40px 0;
     border-top:1px solid var(--line);
@@ -521,11 +516,13 @@
     font-weight:400;
     line-height:1.1;
     transition:color .2s;
+    max-width:18ch;
   }
   .service-desc{
     color:var(--ink-dim);
-    font-size:14px;
-    max-width:55ch;
+    font-size:15px;
+    line-height:1.7;
+    max-width:58ch;
   }
   .service-price{
     font-size:12px;
@@ -533,11 +530,18 @@
     text-transform:uppercase;
     color:var(--ink-dim);
     white-space:nowrap;
+    justify-self:end;
+    text-align:right;
+    align-self:start;
   }
   .service-price b{color:var(--accent);font-weight:700}
   @media(max-width:900px){
     .service{grid-template-columns:1fr;gap:12px;padding:32px 0}
     .service-idx{font-size:10px}
+    .service-price{
+      justify-self:start;
+      text-align:left;
+    }
   }
 
   /* ============ PORTFOLIO ============ */
@@ -573,7 +577,7 @@
     transition:opacity .3s;
   }
   .project:hover .project-visual{opacity:1}
-  .project-content{position:relative;z-index:1}
+  .project-content{position:relative;z-index:2}
   .project-tag{
     font-size:10px;
     text-transform:uppercase;
@@ -593,7 +597,7 @@
     color:var(--ink-dim);
     text-transform:uppercase;
     letter-spacing:.1em;
-    position:relative;z-index:1;
+    position:relative;z-index:2;
   }
 
   /* wizualne tła projektów */
@@ -627,9 +631,85 @@
     opacity:.4;
   }
 
+  /* AM Dmuchańce — ciepły akcent, czytelne tło */
+  .viz-am{
+    background:
+      /* delikatna ciepła aura w prawym dolnym rogu */
+      radial-gradient(ellipse 80% 60% at 100% 100%, rgba(255,107,157,.18) 0%, transparent 55%),
+      radial-gradient(ellipse 60% 50% at 0% 0%, rgba(255,184,107,.12) 0%, transparent 55%),
+      var(--bg-2);
+    opacity:1;
+  }
+  /* dekoracyjna ikonka w tle, w prawym dolnym rogu */
+  .project.is-live .viz-am::after{
+    content:'🏰';
+    position:absolute;
+    bottom:-30px;right:-10px;
+    font-size:200px;
+    line-height:1;
+    opacity:.08;
+    transform:rotate(-8deg);
+    transition:all .4s ease;
+  }
+  .project.is-live:hover .viz-am::after{
+    opacity:.16;
+    transform:rotate(-4deg) scale(1.05);
+  }
+
+  /* Badge LIVE w prawym górnym rogu */
+  .project.is-live::before{
+    content:'● LIVE';
+    position:absolute;
+    top:18px;right:18px;
+    z-index:3;
+    font-size:9px;
+    letter-spacing:.2em;
+    font-weight:700;
+    color:var(--accent);
+    background:rgba(11,20,38,.85);
+    backdrop-filter:blur(6px);
+    padding:6px 10px;
+    border:1px solid var(--accent);
+  }
+
+  /* Opis projektu — czytelny biały tekst */
+  .project-desc{
+    font-size:13px;
+    color:var(--ink-dim);
+    line-height:1.65;
+    margin-top:14px;
+    max-width:44ch;
+    position:relative;
+    z-index:2;
+  }
+
+  /* Link "live" w meta */
+  .project-link{
+    color:var(--accent);
+    transition:color .2s, transform .2s;
+    font-weight:700;
+  }
+  .project:hover .project-link{
+    color:var(--ink);
+    transform:translateX(2px);
+  }
+
+  /* Karta is-live - lekko jaśniejsze tło dla wyróżnienia */
+  .project.is-live{
+    background:linear-gradient(180deg, var(--bg-2) 0%, rgba(17,29,53,.6) 100%);
+  }
+  .project.is-live:hover{
+    border-color:#ff8fb1;
+    box-shadow:6px 6px 0 #ff8fb1;
+  }
+  .project.is-live .project-tag{
+    color:#ff8fb1;
+  }
+
   @media(max-width:900px){
     .portfolio-grid{grid-template-columns:1fr;gap:16px}
     .project.wide,.project.tall,.project.third,.project.half{grid-column:span 1}
+    .project.is-live .viz-am::after{font-size:140px}
   }
 
   /* ============ PROCESS ============ */
@@ -692,7 +772,7 @@
     font-size:26px;
     font-weight:300;
     line-height:1.4;
-    letter-spacing:-.01em;
+    letter-spacing:.01em;
   }
   .about-text p{margin-bottom:24px}
   .about-text em{color:var(--accent);font-style:italic}
@@ -887,7 +967,6 @@
     border:1px solid var(--line);
     background:var(--bg);
     padding:32px;
-    min-height:560px;
     position:relative;
   }
   .booking-widget-header{
@@ -902,10 +981,12 @@
   }
   .booking-widget-header .live{color:var(--accent)}
   .booking-widget iframe{
+    display:block;
     width:100%;
-    min-height:480px;
+    height:clamp(520px, 72vh, 840px);
     border:none;
     background:#fff;
+    border-radius:10px;
   }
   .booking-placeholder{
     padding:40px 20px;
@@ -929,12 +1010,24 @@
     margin-top:8px;
     word-break:break-all;
   }
-  .booking-placeholder a{
+  .booking-placeholder a:not(.btn){
     color:var(--accent);
     text-decoration:underline;
   }
   @media(max-width:900px){
     .booking-wrap{grid-template-columns:1fr;gap:40px}
+    .booking-widget{
+      padding:20px;
+    }
+    .booking-widget iframe{
+      height:70vh;
+    }
+  }
+  @media(max-width:560px){
+    .booking-widget iframe{
+      height:68vh;
+      min-height:500px;
+    }
   }
 
   /* ============ FAQ ============ */
@@ -1035,7 +1128,7 @@
 
   /* ============ CONTACT / FOOTER ============ */
   .contact-section {
-    padding: 140px var(--site-gutter);
+    padding: 140px 32px;
     border-bottom: 1px solid var(--line);
     position: relative;
     background: var(--bg);
@@ -1078,7 +1171,7 @@
   }
   .contact-item a:hover { color: var(--accent); }
   footer {
-    padding: 40px var(--site-gutter) 60px;
+    padding: 40px 32px 60px;
     display: flex; justify-content: space-between;
     font-size: 11px;
     text-transform: uppercase;
@@ -1086,9 +1179,9 @@
     color: var(--ink-dim);
   }
   @media(max-width:700px) {
-    .contact-section { padding: 80px var(--site-gutter); }
+    .contact-section { padding: 80px 20px; }
     .contact-grid { grid-template-columns: 1fr; gap: 40px; }
-    footer { flex-direction: column; gap: 14px; padding: 30px var(--site-gutter) 80px; }
+    footer { flex-direction: column; gap: 14px; padding: 30px 20px 80px; }
   }
 
   /* ============ REVEAL ANIM ============ */
@@ -1123,7 +1216,7 @@
 
   /* HEADER SEKCJA */
  .page-header {
-  padding: clamp(60px, 8vw, 100px) var(--site-gutter) clamp(40px, 6vw, 60px);
+  padding: clamp(60px, 8vw, 100px) 32px clamp(40px, 6vw, 60px);
   min-height: 70vh;
   display: flex;
   align-items: center;
@@ -1190,10 +1283,17 @@
     color:var(--ink-dim);
     animation:heroIn .9s ease .3s both;
   }
-/* szerokość sekcji kontrolowana globalnie przez --content-max */
+.section,
+.page-header,
+.faq-section {
+  max-width: var(--content-max);
+  margin: 0 auto;
+}
   /* FAQ CONTENT */
   .faq-section {
-  padding: clamp(60px, 6vw, 80px) var(--site-gutter) clamp(80px, 10vw, 120px);
+  padding: clamp(60px, 6vw, 80px) 32px clamp(80px, 10vw, 120px);
+  max-width: 1200px;
+  margin: 0 auto;
 }
   .faq-intro{
     display:grid;

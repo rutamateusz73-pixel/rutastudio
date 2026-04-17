@@ -1,0 +1,9 @@
+# robots.txt dla RUTA STUDIO
+# =============================
+
+User-agent: *
+Allow: /
+
+# Sitemap
+# TODO: Po kupieniu domeny zamień rutastudio.pl na swoją docelową domenę
+Sitemap: https://rutastudio.pl/sitemap.xml

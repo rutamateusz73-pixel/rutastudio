@@ -1,0 +1,61 @@
+# =============================================================
+# RUTA STUDIO — .htaccess
+# Konfiguracja dla hostingów Apache (mydevil, cyber_folks,
+# home.pl, nazwa.pl i podobne).
+# Na Netlify / Cloudflare Pages / GitHub Pages ten plik
+# jest ignorowany — używane są inne (_headers, _redirects).
+# =============================================================
+
+# Włącz przepisywanie URL
+RewriteEngine On
+
+# HTTPS wymuszenie (po wgraniu certyfikatu SSL)
+RewriteCond %{HTTPS} off
+RewriteRule ^(.*)$ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+
+# Usuwanie .html z URL (ładniejsze linki)
+# /faq zamiast /faq.html
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteCond %{REQUEST_FILENAME}\.html -f
+RewriteRule ^(.+?)/?$ $1.html [L]
+
+# ========= CACHE ========
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+  # Grafika — 1 rok
+  ExpiresByType image/jpg  "access plus 1 year"
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif  "access plus 1 year"
+  ExpiresByType image/png  "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+
+  # CSS / JS — 1 miesiąc
+  ExpiresByType text/css       "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # Fonty — 1 rok
+  ExpiresByType font/woff  "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+
+  # HTML — 1 godzina
+  ExpiresByType text/html "access plus 1 hour"
+</IfModule>
+
+# ========= KOMPRESJA ========
+<IfModule mod_deflate.c>
+  AddOutputFilterByType DEFLATE text/html text/css text/javascript application/javascript application/json image/svg+xml
+</IfModule>
+
+# ========= BEZPIECZEŃSTWO ========
+<IfModule mod_headers.c>
+  Header set X-Content-Type-Options "nosniff"
+  Header set X-Frame-Options "SAMEORIGIN"
+  Header set Referrer-Policy "strict-origin-when-cross-origin"
+  Header set Permissions-Policy "geolocation=(), microphone=(), camera=()"
+</IfModule>
+
+# ========= 404 ========
+ErrorDocument 404 /index.html

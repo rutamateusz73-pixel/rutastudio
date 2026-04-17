@@ -1634,3 +1634,86 @@ margin: 0 auto;
   font-size:14px;
   position:relative;
 }
+/* ============ HERO META (Poprawka daty i lokalizacji na górze) ============ */
+.hero-meta {
+  display: flex;
+  justify-content: space-between;
+  font-size: 11px;
+  text-transform: uppercase;
+  letter-spacing: .18em;
+  color: var(--ink-dim);
+  position: relative;
+  z-index: 2;
+  gap: 15px; /* Dodany odstęp */
+}
+
+@media(max-width: 600px) {
+  .hero-meta {
+    flex-direction: column; /* Układ pionowy na małych ekranach */
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 10px; /* Nieco mniejszy font, żeby się nie zawijał */
+  }
+}
+
+/* ============ PORTFOLIO (Poprawka sekcji realizacje) ============ */
+.project {
+  position: relative;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  background: var(--bg-2);
+  transition: all .3s;
+  aspect-ratio: 4/3; /* To działa dobrze na komputerze... */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 28px;
+}
+
+/* KLUCZOWA POPRAWKA DLA REALIZACJI NA TELEFONIE */
+@media(max-width: 900px) {
+  .portfolio-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+  .project.wide, .project.tall, .project.third, .project.half {
+    grid-column: span 1;
+  }
+  
+  .project {
+    aspect-ratio: auto; /* Wyłączamy stałe proporcje na telefonie! */
+    min-height: 300px;  /* Ale dajemy minimalną wysokość */
+    padding: 24px;      /* Nieco mniejszy padding */
+  }
+
+  .project-title {
+    font-size: 24px;    /* Mniejszy tytuł, żeby nie rozpychał karty */
+    margin-bottom: 15px;
+  }
+
+  .project-desc {
+    font-size: 13px;
+    margin-bottom: 20px;
+    max-width: 100%;    /* Pozwalamy tekstowi zająć całą szerokość */
+  }
+
+  /* Badge LIVE na telefonie przesuwamy nieco, żeby nie zasłaniał tekstu */
+  .project.is-live::before {
+    top: 12px;
+    right: 12px;
+    font-size: 8px;
+    padding: 4px 8px;
+  }
+}
+
+/* Dodatkowa poprawka dla bardzo małych telefonów */
+@media(max-width: 400px) {
+  .project-title {
+    font-size: 22px;
+  }
+  .project-meta {
+    flex-direction: column;
+    gap: 10px;
+    align-items: flex-start;
+  }
+}

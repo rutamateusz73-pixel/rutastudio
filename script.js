@@ -95,7 +95,8 @@ const revealSelectors = [
   '.faq-item',
   '.principle',
   '.stat',
-  '.faq-category'
+  '.faq-category',
+  '.contact-section'
 ].join(', ');
 
 document.querySelectorAll(revealSelectors).forEach(el => {

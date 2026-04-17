@@ -1634,61 +1634,67 @@ margin: 0 auto;
   font-size:14px;
   position:relative;
 }
-/* Znajdź sekcję @media(max-width: 900px) i upewnij się, że zawiera te poprawki: */
+/* ============ POPRAWKI DLA URZĄDZEŃ MOBILNYCH ============ */
+
 @media (max-width: 900px) {
-  .portfolio-grid {
-    grid-template-columns: 1fr;
-    gap: 20px;
+  
+  /* 1. Ukrywamy znaczek LIVE na telefonach */
+  .project.is-live::before {
+    display: none !important;
   }
 
+  /* 2. Naprawiamy górny nagłówek (Poznań / Data), żeby nie nachodziły na siebie */
+  .hero-meta {
+    flex-direction: column;
+    gap: 8px;
+    align-items: flex-start;
+    font-size: 10px;
+    padding-bottom: 20px;
+  }
+
+  /* 3. Naprawiamy sekcję Realizacje (Karty projektów) */
   .project {
-    aspect-ratio: auto;      /* Karta rośnie wraz z ilością tekstu */
-    min-height: 350px;
+    aspect-ratio: auto;      /* Pozwalamy karcie rosnąć w dół wraz z tekstem */
+    min-height: auto;        /* Usuwamy sztywne wysokości */
     padding: 24px;
     display: flex;
     flex-direction: column;
   }
 
-  /* Przesuwamy treść w dół, żeby nie nachodziła na znaczek LIVE */
+  /* Resetujemy marginesy treści teraz, gdy nie ma znaczka LIVE */
   .project-content {
-    padding-top: 35px; 
-    flex: 1; /* Pozwala treści wypełnić środek */
-  }
-
-  /* Poprawka samego znaczka LIVE */
-  .project.is-live::before {
-    top: 15px;      /* Wyżej */
-    right: 15px;    /* Bardziej do rogu */
-    font-size: 8px;
-    padding: 5px 10px;
-    white-space: nowrap;
+    padding-top: 0; 
   }
 
   .project-title {
     font-size: 26px;
-    line-height: 1.2;
-    margin-top: 10px;
+    line-height: 1.1;
+    margin-top: 5px;
   }
 
   .project-desc {
     font-size: 14px;
-    margin-bottom: 30px; /* Odstęp przed dolną belką (meta) */
+    margin-top: 15px;
+    margin-bottom: 25px; /* Odstęp przed dolnym linkiem */
+    opacity: 0.9;
   }
 
-  /* Dolna belka w karcie (Poznań / Zobacz na żywo) */
+  /* Dolna belka w karcie (Lokalizacja / Link) */
   .project-meta {
-    margin-top: auto; /* Zawsze spycha metadane na sam dół karty */
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     padding-top: 15px;
-    border-top: 1px solid rgba(30, 44, 71, 0.5); /* Opcjonalna linia oddzielająca */
-    gap: 10px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); /* Delikatna linia oddzielająca */
   }
 }
 
-/* Poprawka dla bardzo wąskich ekranów (np. iPhone SE) */
+/* Dodatkowa poprawka dla bardzo małych ekranów (poniżej 400px szerokości) */
 @media (max-width: 400px) {
   .project-meta {
-    flex-direction: column;
+    flex-direction: column; /* Na bardzo wąskich tel. tekst idzie pod spód */
     align-items: flex-start;
+    gap: 10px;
   }
   
   .project-title {
